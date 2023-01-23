@@ -1,0 +1,6 @@
+{
+	"_Type": "Action.Type.ToastMessage",
+	"Message": "Affected Entity {AffectedEntity/@odata.id} doesn't have handler yet.",
+	"Duration": 4,
+	"Animated": true
+}
