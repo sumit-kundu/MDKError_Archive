@@ -1,0 +1,12 @@
+{
+	"_Type": "Action.Type.ODataService.ChangeSet",
+	"ActionResult": {
+		"_Name": "ChangeSetPO"
+	},
+	"Target": {
+		"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service"
+	},
+	"Actions": [
+		"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOrderHeaders_Create.action"
+	]
+}

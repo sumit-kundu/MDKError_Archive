@@ -1,84 +1,102 @@
 {
-	"Caption": "PurchaseOrderHeader Detail",
 	"DesignTimeTarget": {
 		"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service",
 		"EntitySet": "PurchaseOrderHeaders",
 		"QueryOptions": ""
 	},
-	"ActionBar": {
-		"Items": [
-			{
-				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_Edit.action",
-				"Position": "Right",
-				"SystemItem": "Edit"
-			},
-			{
-				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_DetailPopover.action",
-				"Position": "Right",
-				"Caption": "More"
-			}
-		]
-	},
 	"Controls": [
 		{
+			"DataSubscriptions": [
+				"PurchaseOrderItems"
+			],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
 			"Sections": [
 				{
 					"ObjectHeader": {
-						"Tags": [],
-						"DetailImage": "",
-						"HeadlineText": "{PurchaseOrderId}",
 						"Subhead": "{CurrencyCode}",
-						"BodyText": "",
 						"Footnote": "{NetAmount}",
 						"Description": "{GrossAmount}",
 						"StatusText": "{SupplierId}",
-						"StatusImage": "",
-						"SubstatusImage": "",
-						"SubstatusText": "{TaxAmount}"
+						"SubstatusText": "{TaxAmount}",
+						"Tags": [],
+						"HeadlineText": "{PurchaseOrderId}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
 					},
-					"_Type": "Section.Type.ObjectHeader"
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0"
 				},
 				{
 					"KeyAndValues": [
 						{
-							"KeyName": "CurrencyCode",
-							"Value": "{CurrencyCode}"
+							"Value": "{CurrencyCode}",
+							"_Name": "KeyValue0",
+							"KeyName": "CurrencyCode"
 						},
 						{
-							"KeyName": "GrossAmount",
-							"Value": "{GrossAmount}"
+							"Value": "{GrossAmount}",
+							"_Name": "KeyValue1",
+							"KeyName": "GrossAmount"
 						},
 						{
-							"KeyName": "NetAmount",
-							"Value": "{NetAmount}"
+							"Value": "{NetAmount}",
+							"_Name": "KeyValue2",
+							"KeyName": "NetAmount"
 						},
 						{
-							"KeyName": "PurchaseOrderId",
-							"Value": "{PurchaseOrderId}"
+							"Value": "{PurchaseOrderId}",
+							"_Name": "KeyValue3",
+							"KeyName": "PurchaseOrderId"
 						},
 						{
-							"KeyName": "SupplierId",
-							"Value": "{SupplierId}"
+							"Value": "{SupplierId}",
+							"_Name": "KeyValue4",
+							"KeyName": "SupplierId"
 						},
 						{
-							"KeyName": "TaxAmount",
-							"Value": "{TaxAmount}"
+							"Value": "{TaxAmount}",
+							"_Name": "KeyValue5",
+							"KeyName": "TaxAmount"
 						}
 					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"EmptySection": {
+						"FooterVisible": false
+					},
 					"Layout": {
 						"NumberOfColumns": 2
-					},
-					"MaxItemCount": 1,
-					"_Name": "SectionKeyValue0",
-					"_Type": "Section.Type.KeyValue"
+					}
 				},
 				{
 					"Header": {
+						"_Name": "SectionHeader0",
+						"UseTopPadding": true,
 						"Caption": "Items"
 					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"EntitySet": "{@odata.readLink}/Items",
+						"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service"
+					},
+					"_Name": "SectionObjectTable0",
+					"EmptySection": {
+						"Caption": "No record found!",
+						"FooterVisible": false
+					},
 					"ObjectCell": {
-						"AccessoryType": "disclosureIndicator",
+						"Title": "{ProductId}",
+						"Subhead": "{CurrencyCode}",
+						"Footnote": "{ItemNumber}",
 						"Description": "{GrossAmount}",
+						"StatusText": "{NetAmount}",
+						"SubstatusText": "{PurchaseOrderId}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "disclosureIndicator",
+						"Tags": [],
 						"AvatarStack": {
 							"Avatars": [
 								{
@@ -87,34 +105,38 @@
 							],
 							"ImageIsCircular": false
 						},
-						"Icons": [],
-						"StatusImage": "",
-						"Title": "{ProductId}",
-						"Footnote": "{ItemNumber}",
-						"PreserveIconStackSpacing": false,
-						"StatusText": "{NetAmount}",
-						"Subhead": "{CurrencyCode}",
-						"SubstatusText": "{PurchaseOrderId}",
-						"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderItems/NavToPurchaseOrderItems_Detail.action"
-					},
-					"EmptySection": {
-						"Caption": "No record found!"
-					},
-					"Target": {
-						"EntitySet": "{@odata.readLink}/Items",
-						"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service"
-					},
-					"_Type": "Section.Type.ObjectTable"
+						"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderItems/NavToPurchaseOrderItems_Detail.action",
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true
+						}
+					}
 				}
-			],
-			"DataSubscriptions": [
-				"PurchaseOrderItems"
-			],
-			"_Type": "Control.Type.SectionedTable",
-			"_Name": "SectionedTable"
+			]
 		}
 	],
 	"_Type": "Page",
 	"_Name": "PurchaseOrderHeaders_Detail",
-	"PrefersLargeCaption": true
+	"Caption": "PurchaseOrderHeader Detail",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Edit",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_Edit.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "More",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_DetailPopover.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
 }
