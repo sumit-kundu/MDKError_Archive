@@ -1,53 +1,42 @@
 {
-	"ActionBar": {
-		"Items": [
-			{
-				"OnPress": "/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action",
-				"Position": "Left",
-				"SystemItem": "Cancel"
-			},
-			{
-				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreateEntity.action",
-				"Position": "Right",
-				"SystemItem": "Save"
-			}
-		]
-	},
-	"Caption": "Create PurchaseOrderHeader Detail",
 	"Controls": [
 		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer",
 			"Sections": [
 				{
 					"Controls": [
 						{
-							"Caption": "CurrencyCode",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "CurrencyCode",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "CurrencyCode"
 						},
 						{
-							"Caption": "GrossAmount",
-							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "GrossAmount",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "GrossAmount",
+							"KeyboardType": "Number"
 						},
 						{
-							"Caption": "NetAmount",
-							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "NetAmount",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "NetAmount",
+							"KeyboardType": "Number"
 						},
 						{
-							"Caption": "PurchaseOrderId",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "PurchaseOrderId",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "PurchaseOrderId"
 						},
 						{
-							"Caption": "SupplierId",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "SupplierId",
+							"IsEditable": true,
 							"AllowMultipleSelection": false,
 							"AllowEmptySelection": true,
-							"IsEditable": true,
-							"IsPickerDismissedOnSelection": true,
+							"Caption": "SupplierId",
 							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
 							"PickerItems": {
 								"DisplayValue": "{SupplierName}",
 								"ReturnValue": "{SupplierId}",
@@ -55,23 +44,54 @@
 									"EntitySet": "Suppliers",
 									"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service"
 								}
-							},
-							"_Name": "SupplierId",
-							"_Type": "Control.Type.FormCell.ListPicker"
+							}
 						},
 						{
-							"Caption": "TaxAmount",
-							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "TaxAmount",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "TaxAmount",
+							"KeyboardType": "Number"
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton0",
+							"IsVisible": true,
+							"Title": "Add items",
+							"TextAlignment": "Center",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_CreatePurchaseOrderItem.action"
 						}
-					]
+					],
+					"Visible": true
 				}
-			],
-			"_Name": "FormCellContainer",
-			"_Type": "Control.Type.FormCellContainer"
+			]
 		}
 	],
 	"_Type": "Page",
-	"_Name": "POHeaders_Create"
+	"_Name": "POHeaders_Create",
+	"Caption": "Create PurchaseOrderHeader Detail",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreateEntity.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
 }
