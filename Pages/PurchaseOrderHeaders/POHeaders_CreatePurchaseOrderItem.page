@@ -1,54 +1,43 @@
 {
-	"ActionBar": {
-		"Items": [
-			{
-				"OnPress": "/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action",
-				"Position": "Left",
-				"SystemItem": "Cancel"
-			},
-			{
-				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreatePurchaseOrderItem.action",
-				"Position": "Right",
-				"SystemItem": "Save"
-			}
-		]
-	},
-	"Caption": "Create PurchaseOrderItem",
 	"Controls": [
 		{
+			"_Type": "Control.Type.FormCellContainer",
+			"_Name": "FormCellContainer",
 			"Sections": [
 				{
 					"Controls": [
 						{
-							"Caption": "CurrencyCode",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "CurrencyCode",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "CurrencyCode"
 						},
 						{
-							"Caption": "GrossAmount",
-							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "GrossAmount",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "GrossAmount",
+							"KeyboardType": "Number"
 						},
 						{
-							"Caption": "ItemNumber",
-							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "ItemNumber",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "ItemNumber",
+							"KeyboardType": "Number"
 						},
 						{
-							"Caption": "NetAmount",
-							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "NetAmount",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "NetAmount",
+							"KeyboardType": "Number"
 						},
 						{
-							"Caption": "ProductId",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "ProductId",
+							"IsEditable": true,
 							"AllowMultipleSelection": false,
 							"AllowEmptySelection": true,
-							"IsEditable": true,
-							"IsPickerDismissedOnSelection": true,
+							"Caption": "ProductId",
 							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
 							"PickerItems": {
 								"DisplayValue": "{Name}",
 								"ReturnValue": "{ProductId}",
@@ -56,17 +45,18 @@
 									"EntitySet": "Products",
 									"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service"
 								}
-							},
-							"_Name": "ProductId",
-							"_Type": "Control.Type.FormCell.ListPicker"
+							}
 						},
 						{
-							"Caption": "PurchaseOrderId",
+							"Value": "{PurchaseOrderId}",
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "PurchaseOrderId",
+							"IsEditable": false,
 							"AllowMultipleSelection": false,
 							"AllowEmptySelection": true,
-							"IsEditable": false,
-							"IsPickerDismissedOnSelection": true,
+							"Caption": "PurchaseOrderId",
 							"IsSelectedSectionEnabled": true,
+							"IsPickerDismissedOnSelection": true,
 							"PickerItems": {
 								"DisplayValue": "{PurchaseOrderId}",
 								"ReturnValue": "{PurchaseOrderId}",
@@ -74,35 +64,53 @@
 									"EntitySet": "PurchaseOrderHeaders",
 									"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service"
 								}
-							},
-							"_Name": "PurchaseOrderId",
-							"_Type": "Control.Type.FormCell.ListPicker",
-							"Value": "{PurchaseOrderId}"
+							}
 						},
 						{
-							"Caption": "Quantity",
-							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "Quantity",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "Quantity",
+							"KeyboardType": "Number"
 						},
 						{
-							"Caption": "QuantityUnit",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "QuantityUnit",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "QuantityUnit"
 						},
 						{
-							"Caption": "TaxAmount",
-							"KeyboardType": "Number",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "TaxAmount",
-							"_Type": "Control.Type.FormCell.SimpleProperty"
+							"Caption": "TaxAmount",
+							"KeyboardType": "Number"
 						}
-					]
+					],
+					"Visible": true
 				}
-			],
-			"_Name": "FormCellContainer",
-			"_Type": "Control.Type.FormCellContainer"
+			]
 		}
 	],
 	"_Type": "Page",
-	"_Name": "PurchaseOrderHeaders_CreatePurchaseOrderItem"
+	"_Name": "POHeaders_CreatePurchaseOrderItem",
+	"Caption": "Create PurchaseOrderItem",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Cancel",
+				"Position": "Left",
+				"IsIconCircular": false,
+				"OnPress": "/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "",
+				"SystemItem": "Save",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreatePurchaseOrderItem.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
 }
