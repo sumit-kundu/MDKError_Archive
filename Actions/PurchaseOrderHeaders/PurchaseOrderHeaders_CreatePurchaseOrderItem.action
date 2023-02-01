@@ -19,16 +19,6 @@
 		"Quantity": "#Control:Quantity/#Value",
 		"QuantityUnit": "#Control:QuantityUnit/#Value",
 		"TaxAmount": "#Control:TaxAmount/#Value"
-	},
-	"CreateLinks": [
-		{
-			"Property": "Header",
-			"Target": {
-				"EntitySet": "PurchaseOrderHeaders",
-				"ReadLink": "pending_1"
-			},
-			"_Enabled": true
-		}
-	]
+	}
 	
 }
