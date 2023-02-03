@@ -42,12 +42,11 @@
 						},
 						{
 							"_Name": "SectionButton3",
-							"Title": "Create Purchase Order",
+							"Title": "Create New Purchase Order",
 							"TextAlignment": "Center",
 							"Alignment": "Center",
 							"ButtonType": "Text",
 							"Semantic": "Tint",
-							"Image": "res://mdk_logo.png",
 							"ImagePosition": "Leading",
 							"FullWidth": false,
 							"Visible": true,

@@ -1,6 +1,8 @@
 {
 	"_Type": "Action.Type.Navigation",
 	"PageToOpen": "/MDK_ErrorArchive/Pages/PurchaseOrderHeaders/POHeaders_CreatePurchaseOrderItem.page",
+	"ClearHistory": false,
 	"ModalPage": false,
-	"ModalPageFullscreen": false
+	"ModalPageFullscreen": false,
+	"NavigationType": "Inner"
 }
