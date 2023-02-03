@@ -5,6 +5,14 @@
 			"_Name": "FormCellContainer",
 			"Sections": [
 				{
+					"Controls": [],
+					"Visible": true
+				},
+				{
+					"Controls": [],
+					"Visible": true
+				},
+				{
 					"Controls": [
 						{
 							"_Type": "Control.Type.FormCell.SimpleProperty",

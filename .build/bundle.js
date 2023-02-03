@@ -863,7 +863,7 @@ module.exports = {"DismissModal":"Action.Type.ClosePage.Canceled","CancelPending
   \****************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"_Type":"Action.Type.ClosePage","CancelPendingActions":false}
+module.exports = {"_Type":"Action.Type.ClosePage","OnSuccess":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreatePurchaseOrderItem.action","CancelPendingActions":false}
 
 /***/ }),
 
