@@ -7,6 +7,7 @@
 		"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service"
 	},
 	"Actions": [
-		"/MDK_ErrorArchive/Actions/CloseModalPage_Complete copy.action"
+		"/MDK_ErrorArchive/Actions/CloseModalPage_Complete copy.action",
+		"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreatePurchaseOrderItem.action"
 	]
 }
