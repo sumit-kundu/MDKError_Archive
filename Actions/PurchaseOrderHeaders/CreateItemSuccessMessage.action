@@ -1,5 +1,6 @@
 {
 	"_Type": "Action.Type.ToastMessage",
+	"OnSuccess": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOrderHeaders_Create.action",
 	"Message": "Entity created",
 	"Duration": 2,
 	"IsIconHidden": true,

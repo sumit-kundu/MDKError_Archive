@@ -4,7 +4,7 @@
 		"_Name": "create"
 	},
 	"OnFailure": "/MDK_ErrorArchive/Actions/CreateEntityFailureMessage.action",
-	"OnSuccess": "/MDK_ErrorArchive/Actions/CreateEntitySuccessMessage.action",
+	"OnSuccess": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/CreateItemSuccessMessage.action",
 	"Target": {
 		"EntitySet": "PurchaseOrderItems",
 		"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service"
