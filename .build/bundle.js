@@ -295,6 +295,41 @@ function DeleteConfirmation(clientAPI) {
 
 /***/ }),
 
+/***/ "./build.definitions/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/saveItemToLocal.js":
+/*!******************************************************************************************!*\
+  !*** ./build.definitions/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/saveItemToLocal.js ***!
+  \******************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ saveItemToLocal)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function saveItemToLocal(clientAPI) {
+  var clientData = context.evaluateTargetPath("#Page:POHeaders_Create/#ClientData");
+  if (!clientData.POItems) {
+    clientData.POItems = [];
+  }
+  clientData.POItems.push({
+    "CurrencyCode": context.getPageProxy().evaluateTargetPath("#Control:CurrencyCode/#Value"),
+    "GrossAmount": context.getPageProxy().evaluateTargetPath("#Control:GrossAmount/#Value"),
+    "ItemNumber": context.getPageProxy().evaluateTargetPath("#Control:ItemNumber/#Value"),
+    "NetAmount": context.getPageProxy().evaluateTargetPath("#Control:NetAmount/#Value"),
+    "ProductId": context.getPageProxy().evaluateTargetPath("#Control:ProductId/#Value"),
+    "PurchaseOrderId": context.getPageProxy().evaluateTargetPath("#Control:PurchaseOrderId/#Value"),
+    "Quantity": context.getPageProxy().evaluateTargetPath("#Control:Quantity/#Value"),
+    "QuantityUnit": context.getPageProxy().evaluateTargetPath("#Control:QuantityUnit/#Value"),
+    "TaxAmount": context.getPageProxy().evaluateTargetPath("#Control:TaxAmount/#Value")
+  });
+}
+
+/***/ }),
+
 /***/ "./build.definitions/MDK_ErrorArchive/Rules/PurchaseOrderItems/PurchaseOrderItems_DeleteConfirmation.js":
 /*!**************************************************************************************************************!*\
   !*** ./build.definitions/MDK_ErrorArchive/Rules/PurchaseOrderItems/PurchaseOrderItems_DeleteConfirmation.js ***!
@@ -633,7 +668,7 @@ module.exports = {"Caption":"Update Product Detail","DesignTimeTarget":{"Service
   \*********************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer","Sections":[{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"CurrencyCode","Caption":"CurrencyCode"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"GrossAmount","Caption":"GrossAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"NetAmount","Caption":"NetAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"PurchaseOrderId","Caption":"PurchaseOrderId"},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"SupplierId","IsEditable":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"SupplierId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{SupplierName}","ReturnValue":"{SupplierId}","Target":{"EntitySet":"Suppliers","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"TaxAmount","Caption":"TaxAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Title":"Add items","TextAlignment":"Center","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOHeaders_CreatePurchaseOrderItem.action"}],"Visible":true}]}],"_Type":"Page","_Name":"POHeaders_Create","Caption":"Create PurchaseOrderHeader Detail","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreateEntity.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer","Sections":[{"Controls":[],"Visible":true},{"Controls":[],"Visible":true},{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"CurrencyCode","Caption":"CurrencyCode"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"GrossAmount","Caption":"GrossAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"NetAmount","Caption":"NetAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"PurchaseOrderId","Caption":"PurchaseOrderId"},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"SupplierId","IsEditable":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"SupplierId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{SupplierName}","ReturnValue":"{SupplierId}","Target":{"EntitySet":"Suppliers","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"TaxAmount","Caption":"TaxAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Title":"Add items","TextAlignment":"Center","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOHeaders_CreatePurchaseOrderItem.action"}],"Visible":true}]}],"_Type":"Page","_Name":"POHeaders_Create","Caption":"Create PurchaseOrderHeader Detail","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreateEntity.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -643,7 +678,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":
   \**************************************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer","Sections":[{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"CurrencyCode","Caption":"CurrencyCode"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"GrossAmount","Caption":"GrossAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"ItemNumber","Caption":"ItemNumber","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"NetAmount","Caption":"NetAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"ProductId","IsEditable":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"ProductId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{Name}","ReturnValue":"{ProductId}","Target":{"EntitySet":"Products","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"Value":"{PurchaseOrderId}","_Type":"Control.Type.FormCell.ListPicker","_Name":"PurchaseOrderId","IsEditable":false,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"PurchaseOrderId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{PurchaseOrderId}","ReturnValue":"{PurchaseOrderId}","Target":{"EntitySet":"PurchaseOrderHeaders","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"Quantity","Caption":"Quantity","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"QuantityUnit","Caption":"QuantityUnit"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"TaxAmount","Caption":"TaxAmount","KeyboardType":"Number"}],"Visible":true}]}],"_Type":"Page","_Name":"POHeaders_CreatePurchaseOrderItem","Caption":"Create PurchaseOrderItem","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/ClosePOItemSave.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer","Sections":[{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"CurrencyCode","Caption":"CurrencyCode"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"GrossAmount","Caption":"GrossAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"ItemNumber","Caption":"ItemNumber","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"NetAmount","Caption":"NetAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"ProductId","IsEditable":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"ProductId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{Name}","ReturnValue":"{ProductId}","Target":{"EntitySet":"Products","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"Value":"{PurchaseOrderId}","_Type":"Control.Type.FormCell.ListPicker","_Name":"PurchaseOrderId","IsEditable":false,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"PurchaseOrderId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{PurchaseOrderId}","ReturnValue":"{PurchaseOrderId}","Target":{"EntitySet":"PurchaseOrderHeaders","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"Quantity","Caption":"Quantity","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"QuantityUnit","Caption":"QuantityUnit"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"TaxAmount","Caption":"TaxAmount","KeyboardType":"Number"}],"Visible":true}]}],"_Type":"Page","_Name":"POHeaders_CreatePurchaseOrderItem","Caption":"Create PurchaseOrderItem","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_CreatePurchaseOrderItem.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -863,7 +898,7 @@ module.exports = {"DismissModal":"Action.Type.ClosePage.Canceled","CancelPending
   \****************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"_Type":"Action.Type.ClosePage","OnSuccess":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreatePurchaseOrderItem.action","CancelPendingActions":false}
+module.exports = {"_Type":"Action.Type.ClosePage","OnSuccess":"/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/saveItemToLocal.js","CancelPendingActions":false}
 
 /***/ }),
 
@@ -903,7 +938,7 @@ module.exports = {"Message":"Create entity failure - {#ActionResults:create/erro
   \**************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Animated":true,"Duration":2,"Message":"Entity created","IsIconHidden":true,"OnSuccess":"/MDK_ErrorArchive/Actions/CloseModalPage_Complete.action","_Type":"Action.Type.ToastMessage"}
+module.exports = {"_Type":"Action.Type.ToastMessage","OnSuccess":"/MDK_ErrorArchive/Actions/ClosePage.action","Message":"Entity created","Duration":2,"IsIconHidden":true,"Animated":true}
 
 /***/ }),
 
@@ -1083,7 +1118,7 @@ module.exports = {"_Type":"Action.Type.ODataService.ChangeSet","ActionResult":{"
   \************************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"_Type":"Action.Type.ODataService.ChangeSet","ActionResult":{"_Name":"ClosePOItemSave"},"Target":{"Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"},"Actions":["/MDK_ErrorArchive/Actions/CloseModalPage_Complete copy.action","/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreatePurchaseOrderItem.action"]}
+module.exports = {"_Type":"Action.Type.ODataService.ChangeSet","ActionResult":{"_Name":"ClosePOItemSave"},"Target":{"Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"},"Actions":["/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_CreatePurchaseOrderItem.action"]}
 
 /***/ }),
 
@@ -1723,6 +1758,7 @@ let mdk_errorarchive_rules_errorarchive_errorarchive_decidewhicheditpage_js = __
 let mdk_errorarchive_rules_onwillupdate_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/OnWillUpdate.js */ "./build.definitions/MDK_ErrorArchive/Rules/OnWillUpdate.js")
 let mdk_errorarchive_rules_products_products_deleteconfirmation_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/Products/Products_DeleteConfirmation.js */ "./build.definitions/MDK_ErrorArchive/Rules/Products/Products_DeleteConfirmation.js")
 let mdk_errorarchive_rules_purchaseorderheaders_purchaseorderheaders_deleteconfirmation_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/PurchaseOrderHeaders/PurchaseOrderHeaders_DeleteConfirmation.js */ "./build.definitions/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/PurchaseOrderHeaders_DeleteConfirmation.js")
+let mdk_errorarchive_rules_purchaseorderheaders_saveitemtolocal_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/PurchaseOrderHeaders/saveItemToLocal.js */ "./build.definitions/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/saveItemToLocal.js")
 let mdk_errorarchive_rules_purchaseorderitems_purchaseorderitems_deleteconfirmation_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/PurchaseOrderItems/PurchaseOrderItems_DeleteConfirmation.js */ "./build.definitions/MDK_ErrorArchive/Rules/PurchaseOrderItems/PurchaseOrderItems_DeleteConfirmation.js")
 let mdk_errorarchive_rules_resetappsettingsandlogout_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/ResetAppSettingsAndLogout.js */ "./build.definitions/MDK_ErrorArchive/Rules/ResetAppSettingsAndLogout.js")
 let mdk_errorarchive_rules_suppliers_suppliers_deleteconfirmation_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/Suppliers/Suppliers_DeleteConfirmation.js */ "./build.definitions/MDK_ErrorArchive/Rules/Suppliers/Suppliers_DeleteConfirmation.js")
@@ -1844,6 +1880,7 @@ module.exports = {
 	mdk_errorarchive_rules_onwillupdate_js : mdk_errorarchive_rules_onwillupdate_js,
 	mdk_errorarchive_rules_products_products_deleteconfirmation_js : mdk_errorarchive_rules_products_products_deleteconfirmation_js,
 	mdk_errorarchive_rules_purchaseorderheaders_purchaseorderheaders_deleteconfirmation_js : mdk_errorarchive_rules_purchaseorderheaders_purchaseorderheaders_deleteconfirmation_js,
+	mdk_errorarchive_rules_purchaseorderheaders_saveitemtolocal_js : mdk_errorarchive_rules_purchaseorderheaders_saveitemtolocal_js,
 	mdk_errorarchive_rules_purchaseorderitems_purchaseorderitems_deleteconfirmation_js : mdk_errorarchive_rules_purchaseorderitems_purchaseorderitems_deleteconfirmation_js,
 	mdk_errorarchive_rules_resetappsettingsandlogout_js : mdk_errorarchive_rules_resetappsettingsandlogout_js,
 	mdk_errorarchive_rules_suppliers_suppliers_deleteconfirmation_js : mdk_errorarchive_rules_suppliers_suppliers_deleteconfirmation_js,
