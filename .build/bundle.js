@@ -678,7 +678,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":
   \**************************************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer","Sections":[{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"CurrencyCode","Caption":"CurrencyCode"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"GrossAmount","Caption":"GrossAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"ItemNumber","Caption":"ItemNumber","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"NetAmount","Caption":"NetAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"ProductId","IsEditable":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"ProductId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{Name}","ReturnValue":"{ProductId}","Target":{"EntitySet":"Products","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"Value":"{PurchaseOrderId}","_Type":"Control.Type.FormCell.ListPicker","_Name":"PurchaseOrderId","IsEditable":false,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"PurchaseOrderId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{PurchaseOrderId}","ReturnValue":"{PurchaseOrderId}","Target":{"EntitySet":"PurchaseOrderHeaders","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"Quantity","Caption":"Quantity","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"QuantityUnit","Caption":"QuantityUnit"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"TaxAmount","Caption":"TaxAmount","KeyboardType":"Number"}],"Visible":true}]}],"_Type":"Page","_Name":"POHeaders_CreatePurchaseOrderItem","Caption":"Create PurchaseOrderItem","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_CreatePurchaseOrderItem.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer","Sections":[{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"CurrencyCode","Caption":"CurrencyCode"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"GrossAmount","Caption":"GrossAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"ItemNumber","Caption":"ItemNumber","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"NetAmount","Caption":"NetAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"ProductId","IsEditable":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"ProductId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{Name}","ReturnValue":"{ProductId}","Target":{"EntitySet":"Products","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"Value":"{PurchaseOrderId}","_Type":"Control.Type.FormCell.ListPicker","_Name":"PurchaseOrderId","IsEditable":false,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"PurchaseOrderId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{PurchaseOrderId}","ReturnValue":"{PurchaseOrderId}","Target":{"EntitySet":"PurchaseOrderHeaders","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"Quantity","Caption":"Quantity","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"QuantityUnit","Caption":"QuantityUnit"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"TaxAmount","Caption":"TaxAmount","KeyboardType":"Number"}],"Visible":true}]}],"_Type":"Page","_Name":"POHeaders_CreatePurchaseOrderItem","Caption":"Create PurchaseOrderItem","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/ClosePOItemSave.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -938,7 +938,7 @@ module.exports = {"Message":"Create entity failure - {#ActionResults:create/erro
   \**************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"_Type":"Action.Type.ToastMessage","OnSuccess":"/MDK_ErrorArchive/Actions/ClosePage.action","Message":"Entity created","Duration":2,"IsIconHidden":true,"Animated":true}
+module.exports = {"_Type":"Action.Type.ToastMessage","OnSuccess":"/MDK_ErrorArchive/Actions/CloseModalPage_Complete.action","Message":"Entity created","Duration":2,"IsIconHidden":true,"Animated":true}
 
 /***/ }),
 
@@ -1118,7 +1118,7 @@ module.exports = {"_Type":"Action.Type.ODataService.ChangeSet","ActionResult":{"
   \************************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"_Type":"Action.Type.ODataService.ChangeSet","ActionResult":{"_Name":"ClosePOItemSave"},"Target":{"Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"},"Actions":["/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_CreatePurchaseOrderItem.action"]}
+module.exports = {"_Type":"Action.Type.ODataService.ChangeSet","ActionResult":{"_Name":"ClosePOItemSave"},"Target":{"Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"},"Actions":["/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/saveItemToLocal.js","/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreatePurchaseOrderItem.action"]}
 
 /***/ }),
 
@@ -1129,6 +1129,16 @@ module.exports = {"_Type":"Action.Type.ODataService.ChangeSet","ActionResult":{"
 /***/ ((module) => {
 
 module.exports = {"_Type":"Action.Type.ODataService.ChangeSet","ActionResult":{"_Name":"CreateHeaderAndNavToCreateItems"},"Target":{"Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"},"Actions":["/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOHeaders_CreatePurchaseOrderItem.action"]}
+
+/***/ }),
+
+/***/ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/CreateItemSuccessMessage.action":
+/*!*********************************************************************************************************!*\
+  !*** ./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/CreateItemSuccessMessage.action ***!
+  \*********************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.ToastMessage","OnSuccess":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOrderHeaders_Create.action","Message":"Entity created","Duration":2,"IsIconHidden":true,"Animated":true}
 
 /***/ }),
 
@@ -1199,6 +1209,26 @@ module.exports = {"ModalPageFullscreen":false,"ModalPage":true,"PageToOpen":"/MD
 /***/ ((module) => {
 
 module.exports = {"_Type":"Action.Type.Navigation","PageToOpen":"/MDK_ErrorArchive/Pages/PurchaseOrderHeaders/PurchaseOrderHeaders_List.page","NavigationType":"Inner"}
+
+/***/ }),
+
+/***/ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreateEntity.action":
+/*!*******************************************************************************************************!*\
+  !*** ./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreateEntity.action ***!
+  \*******************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"CreateLinks":[],"OnFailure":"/MDK_ErrorArchive/Actions/CreateEntityFailureMessage.action","OnSuccess":"/MDK_ErrorArchive/Actions/CreateEntitySuccessMessage.action","Properties":{"CurrencyCode":"#Control:CurrencyCode/#Value","GrossAmount":"#Control:GrossAmount/#Value","NetAmount":"#Control:NetAmount/#Value","PurchaseOrderId":"#Control:PurchaseOrderId/#Value","SupplierId":"#Control:SupplierId/#SelectedValue","TaxAmount":"#Control:TaxAmount/#Value"},"Target":{"EntitySet":"PurchaseOrderHeaders","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"},"ActionResult":{"_Name":"create"},"_Type":"Action.Type.ODataService.CreateEntity"}
+
+/***/ }),
+
+/***/ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreatePurchaseOrderItem.action":
+/*!******************************************************************************************************************!*\
+  !*** ./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreatePurchaseOrderItem.action ***!
+  \******************************************************************************************************************/
+/***/ ((module) => {
+
+module.exports = {"_Type":"Action.Type.ODataService.CreateEntity","ActionResult":{"_Name":"create"},"OnFailure":"/MDK_ErrorArchive/Actions/CreateEntityFailureMessage.action","OnSuccess":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/CreateItemSuccessMessage.action","Target":{"EntitySet":"PurchaseOrderItems","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"},"Properties":{"CurrencyCode":"#Control:CurrencyCode/#Value","GrossAmount":"#Control:GrossAmount/#Value","ItemNumber":"#Control:ItemNumber/#Value","NetAmount":"#Control:NetAmount/#Value","ProductId":"#Control:ProductId/#SelectedValue","Quantity":"#Control:Quantity/#Value","QuantityUnit":"#Control:QuantityUnit/#Value","TaxAmount":"#Control:TaxAmount/#Value"}}
 
 /***/ }),
 
@@ -1680,6 +1710,7 @@ let mdk_errorarchive_actions_products_products_updateentity_action = __webpack_r
 let mdk_errorarchive_actions_purchaseorderheaders_changesetpo_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/ChangeSetPO.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/ChangeSetPO.action")
 let mdk_errorarchive_actions_purchaseorderheaders_closepoitemsave_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/ClosePOItemSave.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/ClosePOItemSave.action")
 let mdk_errorarchive_actions_purchaseorderheaders_createheaderandnavtocreateitems_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/CreateHeaderAndNavToCreateItems.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/CreateHeaderAndNavToCreateItems.action")
+let mdk_errorarchive_actions_purchaseorderheaders_createitemsuccessmessage_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/CreateItemSuccessMessage.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/CreateItemSuccessMessage.action")
 let mdk_errorarchive_actions_purchaseorderheaders_navtopoheaders_createpurchaseorderitem_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOHeaders_CreatePurchaseOrderItem.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOHeaders_CreatePurchaseOrderItem.action")
 let mdk_errorarchive_actions_purchaseorderheaders_navtoporderheaders_create_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOrderHeaders_Create.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOrderHeaders_Create.action")
 let mdk_errorarchive_actions_purchaseorderheaders_navtopurchaseorderheaders_create_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_Create.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_Create.action")
@@ -1687,6 +1718,8 @@ let mdk_errorarchive_actions_purchaseorderheaders_navtopurchaseorderheaders_crea
 let mdk_errorarchive_actions_purchaseorderheaders_navtopurchaseorderheaders_detail_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_Detail.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_Detail.action")
 let mdk_errorarchive_actions_purchaseorderheaders_navtopurchaseorderheaders_edit_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_Edit.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_Edit.action")
 let mdk_errorarchive_actions_purchaseorderheaders_navtopurchaseorderheaders_list_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_List.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_List.action")
+let mdk_errorarchive_actions_purchaseorderheaders_poheaders_createentity_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreateEntity.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreateEntity.action")
+let mdk_errorarchive_actions_purchaseorderheaders_poheaders_createpurchaseorderitem_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreatePurchaseOrderItem.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreatePurchaseOrderItem.action")
 let mdk_errorarchive_actions_purchaseorderheaders_purchaseorderheaders_createentity_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreateEntity.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreateEntity.action")
 let mdk_errorarchive_actions_purchaseorderheaders_purchaseorderheaders_createpurchaseorderitem_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreatePurchaseOrderItem.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreatePurchaseOrderItem.action")
 let mdk_errorarchive_actions_purchaseorderheaders_purchaseorderheaders_deleteentity_action = __webpack_require__(/*! ./MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_DeleteEntity.action */ "./build.definitions/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_DeleteEntity.action")
@@ -1802,6 +1835,7 @@ module.exports = {
 	mdk_errorarchive_actions_purchaseorderheaders_changesetpo_action : mdk_errorarchive_actions_purchaseorderheaders_changesetpo_action,
 	mdk_errorarchive_actions_purchaseorderheaders_closepoitemsave_action : mdk_errorarchive_actions_purchaseorderheaders_closepoitemsave_action,
 	mdk_errorarchive_actions_purchaseorderheaders_createheaderandnavtocreateitems_action : mdk_errorarchive_actions_purchaseorderheaders_createheaderandnavtocreateitems_action,
+	mdk_errorarchive_actions_purchaseorderheaders_createitemsuccessmessage_action : mdk_errorarchive_actions_purchaseorderheaders_createitemsuccessmessage_action,
 	mdk_errorarchive_actions_purchaseorderheaders_navtopoheaders_createpurchaseorderitem_action : mdk_errorarchive_actions_purchaseorderheaders_navtopoheaders_createpurchaseorderitem_action,
 	mdk_errorarchive_actions_purchaseorderheaders_navtoporderheaders_create_action : mdk_errorarchive_actions_purchaseorderheaders_navtoporderheaders_create_action,
 	mdk_errorarchive_actions_purchaseorderheaders_navtopurchaseorderheaders_create_action : mdk_errorarchive_actions_purchaseorderheaders_navtopurchaseorderheaders_create_action,
@@ -1809,6 +1843,8 @@ module.exports = {
 	mdk_errorarchive_actions_purchaseorderheaders_navtopurchaseorderheaders_detail_action : mdk_errorarchive_actions_purchaseorderheaders_navtopurchaseorderheaders_detail_action,
 	mdk_errorarchive_actions_purchaseorderheaders_navtopurchaseorderheaders_edit_action : mdk_errorarchive_actions_purchaseorderheaders_navtopurchaseorderheaders_edit_action,
 	mdk_errorarchive_actions_purchaseorderheaders_navtopurchaseorderheaders_list_action : mdk_errorarchive_actions_purchaseorderheaders_navtopurchaseorderheaders_list_action,
+	mdk_errorarchive_actions_purchaseorderheaders_poheaders_createentity_action : mdk_errorarchive_actions_purchaseorderheaders_poheaders_createentity_action,
+	mdk_errorarchive_actions_purchaseorderheaders_poheaders_createpurchaseorderitem_action : mdk_errorarchive_actions_purchaseorderheaders_poheaders_createpurchaseorderitem_action,
 	mdk_errorarchive_actions_purchaseorderheaders_purchaseorderheaders_createentity_action : mdk_errorarchive_actions_purchaseorderheaders_purchaseorderheaders_createentity_action,
 	mdk_errorarchive_actions_purchaseorderheaders_purchaseorderheaders_createpurchaseorderitem_action : mdk_errorarchive_actions_purchaseorderheaders_purchaseorderheaders_createpurchaseorderitem_action,
 	mdk_errorarchive_actions_purchaseorderheaders_purchaseorderheaders_deleteentity_action : mdk_errorarchive_actions_purchaseorderheaders_purchaseorderheaders_deleteentity_action,

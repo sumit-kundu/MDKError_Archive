@@ -15,7 +15,6 @@
 		"ItemNumber": "#Control:ItemNumber/#Value",
 		"NetAmount": "#Control:NetAmount/#Value",
 		"ProductId": "#Control:ProductId/#SelectedValue",
-		"PurchaseOrderId": "#Control:PurchaseOrderId/#SelectedValue",
 		"Quantity": "#Control:Quantity/#Value",
 		"QuantityUnit": "#Control:QuantityUnit/#Value",
 		"TaxAmount": "#Control:TaxAmount/#Value"
