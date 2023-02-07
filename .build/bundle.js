@@ -310,8 +310,8 @@ __webpack_require__.r(__webpack_exports__);
  * Describe this function...
  * @param {IClientAPI} clientAPI
  */
-function saveItemToLocal(clientAPI) {
-  var clientData = context.evaluateTargetPath("#Page:POHeaders_Create/#ClientData");
+function saveItemToLocal(context) {
+  var clientData = context.evaluateTargetPath("#Page:POHeaders_CreatePurchaseOrderItem/#ClientData");
   if (!clientData.POItems) {
     clientData.POItems = [];
   }
@@ -326,6 +326,30 @@ function saveItemToLocal(clientAPI) {
     "QuantityUnit": context.getPageProxy().evaluateTargetPath("#Control:QuantityUnit/#Value"),
     "TaxAmount": context.getPageProxy().evaluateTargetPath("#Control:TaxAmount/#Value")
   });
+}
+
+/***/ }),
+
+/***/ "./build.definitions/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/setContentID.js":
+/*!***************************************************************************************!*\
+  !*** ./build.definitions/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/setContentID.js ***!
+  \***************************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ setContentID)
+/* harmony export */ });
+/**
+ * Describe this function...
+ * @param {IClientAPI} clientAPI
+ */
+function setContentID(context) {
+  var clientData = context.evaluateTargetPath("#Page:POHeaders_Create/#ClientData");
+  if (!clientData.contentID) {
+    clientData.contentID = Date.now();
+  }
 }
 
 /***/ }),
@@ -429,8 +453,8 @@ function DeleteConfirmation(clientAPI) {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // Imports
-var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/api.js");
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\nPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/\n", "",{"version":3,"sources":["webpack://./build.definitions/MDK_ErrorArchive/Styles/Styles.css"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;CAoBC","sourcesContent":["/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\nPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/\n"],"sourceRoot":""}]);
@@ -447,8 +471,8 @@ module.exports = ___CSS_LOADER_EXPORT___;
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // Imports
-var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/api.js");
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\nPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/", "",{"version":3,"sources":["webpack://./build.definitions/MDK_ErrorArchive/Styles/Styles.less"],"names":[],"mappings":"AAAA;;;;;;;;;;;;;;;;;;;;CAoBC","sourcesContent":["/* The LESS stylesheet provides the ability to define styling styles that can be used to style the UI in the MDK app.\n\nExamples:\n\n@mdkYellow1: #ffbb33;\n@mdkRed1: #ff0000;\n\n//// By-Type style: All Pages in the application will now have a yellow background\nPage\n\n{ background-color: @mdkYellow1; }\n//// By-Name style: All Buttons with _Name == \"BlueButton\" will now have this style\n#BlueButton\n\n{ color: @mdkYellow1; background-color: #0000FF; }\n//// By-Class style: These style classes can be referenced from rules and set using ClientAPI setStyle function\n\n.MyButton\n\n{ color: @mdkYellow1; background-color: @mdkRed1; }\n*/"],"sourceRoot":""}]);
@@ -465,8 +489,8 @@ module.exports = ___CSS_LOADER_EXPORT___;
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // Imports
-var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/api.js");
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
@@ -483,8 +507,8 @@ module.exports = ___CSS_LOADER_EXPORT___;
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 // Imports
-var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
-var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js");
+var ___CSS_LOADER_API_SOURCEMAP_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js");
+var ___CSS_LOADER_API_IMPORT___ = __webpack_require__(/*! ../../../../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/api.js */ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/api.js");
 var ___CSS_LOADER_EXPORT___ = ___CSS_LOADER_API_IMPORT___(___CSS_LOADER_API_SOURCEMAP_IMPORT___);
 // Module
 ___CSS_LOADER_EXPORT___.push([module.id, "", "",{"version":3,"sources":[],"names":[],"mappings":"","sourceRoot":""}]);
@@ -494,9 +518,9 @@ module.exports = ___CSS_LOADER_EXPORT___;
 
 /***/ }),
 
-/***/ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js":
+/***/ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/api.js":
 /*!*******************************************************************************************************************************!*\
-  !*** ../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/api.js ***!
+  !*** ../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/api.js ***!
   \*******************************************************************************************************************************/
 /***/ ((module) => {
 
@@ -570,9 +594,9 @@ module.exports = function (cssWithMappingToString) {
 
 /***/ }),
 
-/***/ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js":
+/***/ "../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js":
 /*!**************************************************************************************************************************************************!*\
-  !*** ../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.0/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js ***!
+  !*** ../../extbin/local/openvscode-server/extensions/mdk-vsc-wing-1.2301.1/tools/node_modules/css-loader/dist/runtime/cssWithMappingToString.js ***!
   \**************************************************************************************************************************************************/
 /***/ ((module) => {
 
@@ -668,7 +692,7 @@ module.exports = {"Caption":"Update Product Detail","DesignTimeTarget":{"Service
   \*********************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer","Sections":[{"Controls":[],"Visible":true},{"Controls":[],"Visible":true},{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"CurrencyCode","Caption":"CurrencyCode"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"GrossAmount","Caption":"GrossAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"NetAmount","Caption":"NetAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"PurchaseOrderId","Caption":"PurchaseOrderId"},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"SupplierId","IsEditable":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"SupplierId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{SupplierName}","ReturnValue":"{SupplierId}","Target":{"EntitySet":"Suppliers","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"TaxAmount","Caption":"TaxAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Title":"Add items","TextAlignment":"Center","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOHeaders_CreatePurchaseOrderItem.action"}],"Visible":true}]}],"_Type":"Page","_Name":"POHeaders_Create","Caption":"Create PurchaseOrderHeader Detail","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreateEntity.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer","Sections":[{"Controls":[],"Visible":true},{"Controls":[],"Visible":true},{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"CurrencyCode","Caption":"CurrencyCode"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"GrossAmount","Caption":"GrossAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"NetAmount","Caption":"NetAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"PurchaseOrderId","Caption":"PurchaseOrderId"},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"SupplierId","IsEditable":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"SupplierId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{SupplierName}","ReturnValue":"{SupplierId}","Target":{"EntitySet":"Suppliers","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"TaxAmount","Caption":"TaxAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Title":"Add items","TextAlignment":"Center","Alignment":"Center","ButtonType":"Text","Semantic":"Tint","ImagePosition":"Leading","OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOHeaders_CreatePurchaseOrderItem.action"}],"Visible":true}]}],"_Type":"Page","_Name":"POHeaders_Create","Caption":"Create PurchaseOrderHeader Detail","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreateEntity.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -678,7 +702,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":
   \**************************************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer","Sections":[{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"CurrencyCode","Caption":"CurrencyCode"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"GrossAmount","Caption":"GrossAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"ItemNumber","Caption":"ItemNumber","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"NetAmount","Caption":"NetAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"ProductId","IsEditable":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"ProductId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{Name}","ReturnValue":"{ProductId}","Target":{"EntitySet":"Products","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"Value":"{PurchaseOrderId}","_Type":"Control.Type.FormCell.ListPicker","_Name":"PurchaseOrderId","IsEditable":false,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"PurchaseOrderId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{PurchaseOrderId}","ReturnValue":"{PurchaseOrderId}","Target":{"EntitySet":"PurchaseOrderHeaders","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"Quantity","Caption":"Quantity","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"QuantityUnit","Caption":"QuantityUnit"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"TaxAmount","Caption":"TaxAmount","KeyboardType":"Number"}],"Visible":true}]}],"_Type":"Page","_Name":"POHeaders_CreatePurchaseOrderItem","Caption":"Create PurchaseOrderItem","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/ClosePOItemSave.action"}],"_Name":"ActionBar1"}}
+module.exports = {"Controls":[{"_Type":"Control.Type.FormCellContainer","_Name":"FormCellContainer","Sections":[{"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"CurrencyCode","Caption":"CurrencyCode"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"GrossAmount","Caption":"GrossAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"ItemNumber","Caption":"ItemNumber","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"NetAmount","Caption":"NetAmount","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"ProductId","IsEditable":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"ProductId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{Name}","ReturnValue":"{ProductId}","Target":{"EntitySet":"Products","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"Value":"{PurchaseOrderId}","_Type":"Control.Type.FormCell.ListPicker","_Name":"PurchaseOrderId","IsEditable":false,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"PurchaseOrderId","IsSelectedSectionEnabled":true,"IsPickerDismissedOnSelection":true,"PickerItems":{"DisplayValue":"{PurchaseOrderId}","ReturnValue":"{PurchaseOrderId}","Target":{"EntitySet":"PurchaseOrderHeaders","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"}}},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"Quantity","Caption":"Quantity","KeyboardType":"Number"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"QuantityUnit","Caption":"QuantityUnit"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"TaxAmount","Caption":"TaxAmount","KeyboardType":"Number"}],"Visible":true}]}],"_Type":"Page","_Name":"POHeaders_CreatePurchaseOrderItem","Caption":"Create PurchaseOrderItem","ActionBar":{"Items":[{"_Name":"ActionBarItem0","Caption":"","SystemItem":"Cancel","Position":"Left","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/CloseModalPage_Cancel.action"},{"_Name":"ActionBarItem1","Caption":"","SystemItem":"Save","Position":"Right","IsIconCircular":false,"OnPress":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreatePurchaseOrderItem.action"}],"_Name":"ActionBar1"}}
 
 /***/ }),
 
@@ -1158,7 +1182,7 @@ module.exports = {"_Type":"Action.Type.Navigation","PageToOpen":"/MDK_ErrorArchi
   \**********************************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"_Type":"Action.Type.Navigation","PageToOpen":"/MDK_ErrorArchive/Pages/PurchaseOrderHeaders/POHeaders_Create.page","ClearHistory":false,"ModalPage":false,"ModalPageFullscreen":false}
+module.exports = {"_Type":"Action.Type.Navigation","PageToOpen":"/MDK_ErrorArchive/Pages/PurchaseOrderHeaders/POHeaders_Create.page","ClearHistory":false,"ModalPage":true,"ModalPageFullscreen":false}
 
 /***/ }),
 
@@ -1178,7 +1202,7 @@ module.exports = {"ModalPageFullscreen":false,"ModalPage":true,"PageToOpen":"/MD
   \**********************************************************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"_Type":"Action.Type.Navigation","PageToOpen":"/MDK_ErrorArchive/Pages/PurchaseOrderHeaders/POHeaders_CreatePurchaseOrderItem.page","ModalPage":false,"ModalPageFullscreen":false}
+module.exports = {"_Type":"Action.Type.Navigation","PageToOpen":"/MDK_ErrorArchive/Pages/PurchaseOrderHeaders/POHeaders_CreatePurchaseOrderItem.page","OnSuccess":"/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/setContentID.js","ModalPage":false,"ModalPageFullscreen":false}
 
 /***/ }),
 
@@ -1218,7 +1242,7 @@ module.exports = {"_Type":"Action.Type.Navigation","PageToOpen":"/MDK_ErrorArchi
   \*******************************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"CreateLinks":[],"OnFailure":"/MDK_ErrorArchive/Actions/CreateEntityFailureMessage.action","OnSuccess":"/MDK_ErrorArchive/Actions/CreateEntitySuccessMessage.action","Properties":{"CurrencyCode":"#Control:CurrencyCode/#Value","GrossAmount":"#Control:GrossAmount/#Value","NetAmount":"#Control:NetAmount/#Value","PurchaseOrderId":"#Control:PurchaseOrderId/#Value","SupplierId":"#Control:SupplierId/#SelectedValue","TaxAmount":"#Control:TaxAmount/#Value"},"Target":{"EntitySet":"PurchaseOrderHeaders","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"},"ActionResult":{"_Name":"create"},"_Type":"Action.Type.ODataService.CreateEntity"}
+module.exports = {"_Type":"Action.Type.ODataService.CreateEntity","ActionResult":{"_Name":"create"},"OnFailure":"/MDK_ErrorArchive/Actions/CreateEntityFailureMessage.action","OnSuccess":"/MDK_ErrorArchive/Actions/CreateEntitySuccessMessage.action","Target":{"EntitySet":"PurchaseOrderHeaders","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"},"Properties":{"CurrencyCode":"#Control:CurrencyCode/#Value","GrossAmount":"#Control:GrossAmount/#Value","NetAmount":"#Control:NetAmount/#Value","PurchaseOrderId":"#Control:PurchaseOrderId/#Value","SupplierId":"#Control:SupplierId/#SelectedValue","TaxAmount":"#Control:TaxAmount/#Value"},"Headers":{"Content-ID":"#ClientData/contentID"}}
 
 /***/ }),
 
@@ -1228,7 +1252,7 @@ module.exports = {"CreateLinks":[],"OnFailure":"/MDK_ErrorArchive/Actions/Create
   \******************************************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"_Type":"Action.Type.ODataService.CreateEntity","ActionResult":{"_Name":"create"},"OnFailure":"/MDK_ErrorArchive/Actions/CreateEntityFailureMessage.action","OnSuccess":"/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/CreateItemSuccessMessage.action","Target":{"EntitySet":"PurchaseOrderItems","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"},"Properties":{"CurrencyCode":"#Control:CurrencyCode/#Value","GrossAmount":"#Control:GrossAmount/#Value","ItemNumber":"#Control:ItemNumber/#Value","NetAmount":"#Control:NetAmount/#Value","ProductId":"#Control:ProductId/#SelectedValue","Quantity":"#Control:Quantity/#Value","QuantityUnit":"#Control:QuantityUnit/#Value","TaxAmount":"#Control:TaxAmount/#Value"}}
+module.exports = {"_Type":"Action.Type.ODataService.CreateEntity","ActionResult":{"_Name":"create"},"OnFailure":"/MDK_ErrorArchive/Actions/CreateEntityFailureMessage.action","OnSuccess":"/MDK_ErrorArchive/Actions/CloseModalPage_Complete copy.action","Target":{"EntitySet":"PurchaseOrderItems","Service":"/MDK_ErrorArchive/Services/SampleServiceV2.service"},"Properties":{"CurrencyCode":"#Control:CurrencyCode/#Value","GrossAmount":"#Control:GrossAmount/#Value","ItemNumber":"#Control:ItemNumber/#Value","NetAmount":"#Control:NetAmount/#Value","ProductId":"#Control:ProductId/#SelectedValue","Quantity":"#Control:Quantity/#Value","QuantityUnit":"#Control:QuantityUnit/#Value","TaxAmount":"#Control:TaxAmount/#Value"},"Headers":{"Content-ID":"#Page:POHeaders_Create/#ClientData/contentID"}}
 
 /***/ }),
 
@@ -1792,6 +1816,7 @@ let mdk_errorarchive_rules_onwillupdate_js = __webpack_require__(/*! ./MDK_Error
 let mdk_errorarchive_rules_products_products_deleteconfirmation_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/Products/Products_DeleteConfirmation.js */ "./build.definitions/MDK_ErrorArchive/Rules/Products/Products_DeleteConfirmation.js")
 let mdk_errorarchive_rules_purchaseorderheaders_purchaseorderheaders_deleteconfirmation_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/PurchaseOrderHeaders/PurchaseOrderHeaders_DeleteConfirmation.js */ "./build.definitions/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/PurchaseOrderHeaders_DeleteConfirmation.js")
 let mdk_errorarchive_rules_purchaseorderheaders_saveitemtolocal_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/PurchaseOrderHeaders/saveItemToLocal.js */ "./build.definitions/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/saveItemToLocal.js")
+let mdk_errorarchive_rules_purchaseorderheaders_setcontentid_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/PurchaseOrderHeaders/setContentID.js */ "./build.definitions/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/setContentID.js")
 let mdk_errorarchive_rules_purchaseorderitems_purchaseorderitems_deleteconfirmation_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/PurchaseOrderItems/PurchaseOrderItems_DeleteConfirmation.js */ "./build.definitions/MDK_ErrorArchive/Rules/PurchaseOrderItems/PurchaseOrderItems_DeleteConfirmation.js")
 let mdk_errorarchive_rules_resetappsettingsandlogout_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/ResetAppSettingsAndLogout.js */ "./build.definitions/MDK_ErrorArchive/Rules/ResetAppSettingsAndLogout.js")
 let mdk_errorarchive_rules_suppliers_suppliers_deleteconfirmation_js = __webpack_require__(/*! ./MDK_ErrorArchive/Rules/Suppliers/Suppliers_DeleteConfirmation.js */ "./build.definitions/MDK_ErrorArchive/Rules/Suppliers/Suppliers_DeleteConfirmation.js")
@@ -1917,6 +1942,7 @@ module.exports = {
 	mdk_errorarchive_rules_products_products_deleteconfirmation_js : mdk_errorarchive_rules_products_products_deleteconfirmation_js,
 	mdk_errorarchive_rules_purchaseorderheaders_purchaseorderheaders_deleteconfirmation_js : mdk_errorarchive_rules_purchaseorderheaders_purchaseorderheaders_deleteconfirmation_js,
 	mdk_errorarchive_rules_purchaseorderheaders_saveitemtolocal_js : mdk_errorarchive_rules_purchaseorderheaders_saveitemtolocal_js,
+	mdk_errorarchive_rules_purchaseorderheaders_setcontentid_js : mdk_errorarchive_rules_purchaseorderheaders_setcontentid_js,
 	mdk_errorarchive_rules_purchaseorderitems_purchaseorderitems_deleteconfirmation_js : mdk_errorarchive_rules_purchaseorderitems_purchaseorderitems_deleteconfirmation_js,
 	mdk_errorarchive_rules_resetappsettingsandlogout_js : mdk_errorarchive_rules_resetappsettingsandlogout_js,
 	mdk_errorarchive_rules_suppliers_suppliers_deleteconfirmation_js : mdk_errorarchive_rules_suppliers_suppliers_deleteconfirmation_js,
