@@ -1,5 +1,6 @@
 {
 	"_Type": "Action.Type.Navigation",
+	"OnSuccess": "/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/setContentID.js",
 	"PageToOpen": "/MDK_ErrorArchive/Pages/PurchaseOrderHeaders/POHeaders_CreatePurchaseOrderItem.page",
 	"ClearHistory": false,
 	"ModalPage": false,
