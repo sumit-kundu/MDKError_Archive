@@ -2,8 +2,8 @@
  * Describe this function...
  * @param {IClientAPI} clientAPI
  */
-export default function saveItemToLocal(clientAPI) {
-    var clientData = context.evaluateTargetPath("#Page:POHeaders_Create/#ClientData");
+export default function saveItemToLocal(context) {
+    var clientData = context.evaluateTargetPath("#Page:POHeaders_CreatePurchaseOrderItem/#ClientData");
     if (!clientData.POItems) {
         clientData.POItems = [];
     }

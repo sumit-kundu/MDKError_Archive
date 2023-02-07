@@ -97,7 +97,7 @@
 				"SystemItem": "Save",
 				"Position": "Right",
 				"IsIconCircular": false,
-				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_CreateEntity.action"
+				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreateEntity.action"
 			}
 		],
 		"_Name": "ActionBar1"

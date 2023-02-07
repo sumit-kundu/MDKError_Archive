@@ -108,7 +108,7 @@
 				"SystemItem": "Save",
 				"Position": "Right",
 				"IsIconCircular": false,
-				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/ClosePOItemSave.action"
+				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreatePurchaseOrderItem.action"
 			}
 		],
 		"_Name": "ActionBar1"

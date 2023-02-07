@@ -4,7 +4,7 @@
 		"_Name": "create"
 	},
 	"OnFailure": "/MDK_ErrorArchive/Actions/CreateEntityFailureMessage.action",
-	"OnSuccess": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/CreateItemSuccessMessage.action",
+	"OnSuccess": "/MDK_ErrorArchive/Actions/CloseModalPage_Complete copy.action",
 	"Target": {
 		"EntitySet": "PurchaseOrderItems",
 		"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service"

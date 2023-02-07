@@ -2,6 +2,6 @@
 	"_Type": "Action.Type.Navigation",
 	"PageToOpen": "/MDK_ErrorArchive/Pages/PurchaseOrderHeaders/POHeaders_Create.page",
 	"ClearHistory": false,
-	"ModalPage": false,
+	"ModalPage": true,
 	"ModalPageFullscreen": false
 }
