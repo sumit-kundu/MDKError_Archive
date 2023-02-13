@@ -1,0 +1,135 @@
+{
+	"DesignTimeTarget": {
+		"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service",
+		"EntitySet": "PurchaseOrderHeaders",
+		"QueryOptions": ""
+	},
+	"Controls": [
+		{
+			"DataSubscriptions": [
+				"PurchaseOrderItems"
+			],
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "#Page:-Previous/#Control:CurrencyCode/#Value",
+						"Footnote": "#Page:-Previous/#Control:NetAmount/#Value",
+						"Description": "#Page:-Previous/#Control:GrossAmount/#Value",
+						"SubstatusText": "#Page:-Previous/#Control:TaxAmount/#Value",
+						"Tags": [],
+						"HeadlineText": "#Page:-Previous/#Control:PurchaseOrderId/#Value",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0"
+				},
+				{
+					"KeyAndValues": [
+						{
+							"Value": "{GrossAmount}",
+							"_Name": "KeyValue1",
+							"KeyName": "GrossAmount"
+						},
+						{
+							"Value": "{NetAmount}",
+							"_Name": "KeyValue2",
+							"KeyName": "NetAmount"
+						},
+						{
+							"Value": "{PurchaseOrderId}",
+							"_Name": "KeyValue3",
+							"KeyName": "PurchaseOrderId"
+						},
+						{
+							"Value": "{SupplierId}",
+							"_Name": "KeyValue4",
+							"KeyName": "SupplierId"
+						},
+						{
+							"Value": "{TaxAmount}",
+							"_Name": "KeyValue5",
+							"KeyName": "TaxAmount"
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				},
+				{
+					"Header": {
+						"_Name": "SectionHeader0",
+						"UseTopPadding": true,
+						"Caption": "Items"
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"DataSubscriptions": [
+						"PurchaseOrderItems"
+					],
+					"Target": "{#ClientData/POItems}",
+					"_Name": "SectionObjectTable0",
+					"EmptySection": {
+						"Caption": "No record found!",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true
+						},
+						
+						"Subhead": "{CurrencyCode}",
+						"Description": "{GrossAmount}",
+						"StatusText": "{NetAmount}",
+						"SubstatusText": "{PurchaseOrderId}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "disclosureIndicator",
+						"Tags": [],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": ""
+								}
+							],
+							"ImageIsCircular": false
+						},
+						"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderItems/NavToPurchaseOrderItems_Detail.action"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "PO_Detail",
+	"Caption": "PO Detail",
+	"PrefersLargeCaption": true,
+	"ActionBar": {
+		"Items": [
+			{
+				"_Name": "ActionBarItem0",
+				"Caption": "",
+				"SystemItem": "Edit",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPurchaseOrderHeaders_Edit.action"
+			},
+			{
+				"_Name": "ActionBarItem1",
+				"Caption": "More",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/PurchaseOrderHeaders_DetailPopover.action"
+			}
+		],
+		"_Name": "ActionBar1"
+	}
+}

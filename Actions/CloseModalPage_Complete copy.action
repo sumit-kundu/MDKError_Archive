@@ -1,5 +1,5 @@
 {
 	"_Type": "Action.Type.ClosePage",
-	"OnSuccess": "/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/saveItemToLocal.js",
+	"OnSuccess": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPO_Detail.action",
 	"CancelPendingActions": false
 }

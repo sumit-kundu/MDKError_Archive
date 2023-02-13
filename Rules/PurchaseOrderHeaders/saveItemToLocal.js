@@ -3,11 +3,12 @@
  * @param {IClientAPI} clientAPI
  */
 export default function saveItemToLocal(context) {
-    var clientData = context.evaluateTargetPath("#Page:POHeaders_CreatePurchaseOrderItem/#ClientData");
+    var clientData = context.evaluateTargetPath("#Page:PO_Detail/#ClientData");
     if (!clientData.POItems) {
         clientData.POItems = [];
     }
     clientData.POItems.push({
+        
         "CurrencyCode": context.getPageProxy().evaluateTargetPath("#Control:CurrencyCode/#Value"),
         "GrossAmount": context.getPageProxy().evaluateTargetPath("#Control:GrossAmount/#Value"),
         "ItemNumber": context.getPageProxy().evaluateTargetPath("#Control:ItemNumber/#Value"),
@@ -18,4 +19,12 @@ export default function saveItemToLocal(context) {
         "QuantityUnit": context.getPageProxy().evaluateTargetPath("#Control:QuantityUnit/#Value"),
         "TaxAmount": context.getPageProxy().evaluateTargetPath("#Control:TaxAmount/#Value")
     });
+    
+    return createPOItem = clientAPI.executeAction("/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/POHeaders_CreatePurchaseOrderItem.action");
+
+    // return createPOItem.then((result) => {
+    //     return clientAPI.executeAction("/MyApp/Actions/NavigateToProductList.action");
+    // }), (error) => {
+    //     alert(`Action Failed: ${error}`);
+    // };
 }

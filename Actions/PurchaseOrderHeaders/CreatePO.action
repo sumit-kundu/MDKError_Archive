@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "CreatePO"
+	},
+	"OnSuccess": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOHeaders_CreatePurchaseOrderItem.action",
+	"Target": {
+		"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service",
+		"EntitySet": "PurchaseOrderHeaders"
+	},
+	"Properties": {
+		"CurrencyCode": "#Control:CurrencyCode/#Value",
+		"GrossAmount": "#Control:GrossAmount/#Value",
+		"NetAmount": "#Control:NetAmount/#Value",
+		"PurchaseOrderId": "#Control:PurchaseOrderId/#Value",
+		"SupplierId": "#Control:SupplierId/#SelectedValue",
+		"TaxAmount": "#Control:TaxAmount/#Value"
+	}
+}

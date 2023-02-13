@@ -1,1 +1,12 @@
-{}
+{
+    "mdk.uieditor": {
+        "left": {
+            "visible": true,
+            "width": 215
+        },
+        "right": {
+            "visible": true,
+            "width": 455
+        }
+    }
+}

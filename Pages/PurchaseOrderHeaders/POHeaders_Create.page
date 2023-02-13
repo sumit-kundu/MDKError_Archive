@@ -70,7 +70,7 @@
 							"ButtonType": "Text",
 							"Semantic": "Tint",
 							"ImagePosition": "Leading",
-							"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/NavToPOHeaders_CreatePurchaseOrderItem.action"
+							"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/CreatePO.action"
 						}
 					],
 					"Visible": true

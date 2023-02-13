@@ -1,21 +1,21 @@
 {
-    "Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service",
-    "DefiningRequests": [{
-            "Name": "Suppliers",
-            "Query": "Suppliers"
-        },
-        {
-            "Name": "Products",
-            "Query": "Products"
-        }
-        
-    ],
-    "_Type": "Action.Type.ODataService.Initialize",
-    "ShowActivityIndicator": true,
-    "ActivityIndicatorText": "Downloading...",
-    "ActionResult": {
-        "_Name": "init"
-    },
-    "OnSuccess": "/MDK_ErrorArchive/Actions/Service/InitializeOfflineSuccessMessage.action",
-    "OnFailure": "/MDK_ErrorArchive/Actions/Service/InitializeOfflineFailureMessage.action"
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"OnFailure": "/MDK_ErrorArchive/Actions/Service/InitializeOfflineFailureMessage.action",
+	"OnSuccess": "/MDK_ErrorArchive/Actions/Service/InitializeOfflineSuccessMessage.action",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Downloading...",
+	"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service",
+	"DefiningRequests": [
+		{
+			"Name": "Suppliers",
+			"Query": "Suppliers"
+		},
+		{
+			"Name": "Products",
+			"Query": "Products"
+		}
+	]
 }
