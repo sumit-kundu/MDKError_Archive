@@ -5,13 +5,10 @@
             "Query": "Suppliers"
         },
         {
-            "Name": "PurchaseOrderHeaders",
-            "Query": "PurchaseOrderHeaders"
-        },
-        {
-            "Name": "PurchaseOrderItems",
-            "Query": "PurchaseOrderItems"
+            "Name": "Products",
+            "Query": "Products"
         }
+        
     ],
     "_Type": "Action.Type.OfflineOData.Download",
     "ActionResult": {

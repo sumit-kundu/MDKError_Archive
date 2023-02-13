@@ -1,7 +1,7 @@
 {
 	"_Name": "MDK_ErrorArchive",
 	"Version": "/MDK_ErrorArchive/Globals/AppDefinition_Version.global",
-	"MainPage": "/MDK_ErrorArchive/Pages/Main.page",
+	"MainPage": "/MDK_ErrorArchive/Pages/PurchaseOrderHeaders/POHeaders_Create.page",
 	"OnLaunch": [
 		"/MDK_ErrorArchive/Actions/Service/InitializeOffline.action"
 	],

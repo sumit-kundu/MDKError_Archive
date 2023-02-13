@@ -16,8 +16,5 @@
 		"PurchaseOrderId": "#Control:PurchaseOrderId/#Value",
 		"SupplierId": "#Control:SupplierId/#SelectedValue",
 		"TaxAmount": "#Control:TaxAmount/#Value"
-	},
-	"Headers": {
-		"Content-ID": "#ClientData/contentID"
 	}
 }

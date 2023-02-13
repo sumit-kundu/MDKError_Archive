@@ -18,8 +18,5 @@
 		"Quantity": "#Control:Quantity/#Value",
 		"QuantityUnit": "#Control:QuantityUnit/#Value",
 		"TaxAmount": "#Control:TaxAmount/#Value"
-	},
-	"Headers": {
-		"Content-ID": "#Page:POHeaders_Create/#ClientData/contentID"
 	}
 }
