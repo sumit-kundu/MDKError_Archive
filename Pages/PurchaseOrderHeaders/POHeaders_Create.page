@@ -40,6 +40,7 @@
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "SupplierId",
 							"IsEditable": true,
+							"Value":"1000",
 							"AllowMultipleSelection": false,
 							"AllowEmptySelection": true,
 							"Caption": "SupplierId",

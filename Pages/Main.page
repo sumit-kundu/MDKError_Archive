@@ -51,6 +51,18 @@
 							"FullWidth": false,
 							"Visible": true,
 							"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/ChangeSetPO.action"
+						},
+						{
+							"_Name": "SectionButton4",
+							"Title": "Clear Offline OData",
+							"TextAlignment": "Center",
+							"Alignment": "Center",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"FullWidth": false,
+							"Visible": true,
+							"OnPress": "/MDK_ErrorArchive/Actions/PurchaseOrderHeaders/ClearOfflineOData.action"
 						}
 					]
 				}

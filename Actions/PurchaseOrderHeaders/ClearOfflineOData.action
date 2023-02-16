@@ -1,0 +1,5 @@
+{
+	"_Type": "Action.Type.OfflineOData.Clear",
+	"Service": "/MDK_ErrorArchive/Services/SampleServiceV2.service",
+  	"Force": true
+}

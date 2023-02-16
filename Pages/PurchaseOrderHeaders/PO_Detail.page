@@ -4,6 +4,7 @@
 		"EntitySet": "PurchaseOrderHeaders",
 		"QueryOptions": ""
 	},
+	"OnLoaded": "/MDK_ErrorArchive/Rules/PurchaseOrderHeaders/getPOItems.js",
 	"Controls": [
 		{
 			"DataSubscriptions": [
@@ -75,7 +76,7 @@
 					"DataSubscriptions": [
 						"PurchaseOrderItems"
 					],
-					"Target": "{#ClientData/POItems}",
+					"Target": "{#Page:POHeaders_Create/#ClientData/POItems}",
 					"_Name": "SectionObjectTable0",
 					"EmptySection": {
 						"Caption": "No record found!",
@@ -111,6 +112,19 @@
 	"_Type": "Page",
 	"_Name": "PO_Detail",
 	"Caption": "PO Detail",
+	"ToolBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ToolbarItem",
+				"_Name": "Confirm_PODetail",
+				"Caption": "Confirm",
+				"Enabled": true,
+				"Visible": true,
+				"Clickable": true,
+				"OnPress": "/MDK_ErrorArchive/Actions/CloseModalPage_Complete.action"
+			}
+		]
+	},
 	"PrefersLargeCaption": true,
 	"ActionBar": {
 		"Items": [
